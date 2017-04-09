@@ -10,7 +10,8 @@ RUN wget http://ftp.riken.jp/net/apache/httpd/mod_fcgid/mod_fcgid-2.3.9.tar.gz \
 WORKDIR /opt/mod_fcgid-2.3.9
 RUN . ./configure.apxs \
   && make && make install \
-  && yes '' | cpan -i CGI::Fast
+  && yes '' | cpan -i CGI::Fast \
+  && yes '' | cpan -i LWP::Simple
 
 RUN apt-get purge -y --auto-remove make gcc
 
