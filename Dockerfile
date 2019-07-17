@@ -1,5 +1,5 @@
 FROM httpd:latest
-MAINTAINER unicorn research Ltd
+LABEL maintainer "unicorn research Ltd"
 
 RUN apt-get update && apt-get install -y --no-install-recommends wget make gcc git
 
